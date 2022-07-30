@@ -1,0 +1,452 @@
+/*estilos home*/
+*{
+    padding: 3px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+@import "utilities/variables";
+
+body{
+    .headerHome{
+        display: grid;
+        grid-template-columns:7fr;
+        grid-template-rows:2.5fr;
+        grid-template-areas:" headerHome ";
+        background-color: $colorTerciario;
+        grid-area: headerhome;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .piePagina{
+            background-color:$colorPrincipal;
+            text-align: center;
+            list-style: none;
+            text-decoration: none;
+           font-family: 'Times New Roman', Times, serif;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 8vw;
+            border: 10px solid rgb(6, 5, 5);
+            justify-content: center;
+        }
+        p{
+            text-align: center;
+        }
+        .menu:hover{
+            transform: translate(30px,30px);
+            background-color:whitesmoke;
+            transition: 3s;
+        }
+        ul{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        li{
+            text-decoration:none;
+            list-style: none;
+        }
+        a{
+            text-decoration:none;
+            background-color:$colorSecundario;
+            color: black;
+            text-align: center;
+            list-style:none;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 4vw;
+            border-radius:10px;
+            overflow: hidden;
+            font-weight: bold;
+        }
+    }
+    .seccionCentral{
+        display: grid;
+        grid-template-columns:3.5fr 3.5fr;
+        grid-template-rows:3.5fr  ;
+        grid-template-areas:" divSeccion sectionRutini "; 
+        background-color:$colorSecundario;
+        grid-area: seccionCentral ;
+        font-weight: bold;
+        h2{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        p{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        section{
+            display: flex;
+            background-color:$colorPrincipal;
+        }
+        .imagenRutini{
+            animation-name: imagenRutini;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+        }
+        @keyframes imagenRutini{
+            from{
+                transform: scale(0);
+            }
+            to{
+                transform: scale(0.5);
+            }
+        }
+        .sectionRutini{
+            grid-area: sectionRutini;
+            align-items: center;
+            justify-content: center;
+            display: block;
+        }
+    }
+    .footerHome{
+        display: grid;
+        grid-template-columns:7fr;
+        grid-template-rows:1fr  ;
+        grid-template-areas:" footerHome ";
+        background-color: $colorTerciario;
+        text-align: center;
+        grid-area: footer ;
+        font-weight: bold; 
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+    }
+    @media screen and (max-width:600px){
+        .contendorHome .headerHome{
+            display: grid;
+            grid-template-columns:7fr;
+            grid-template-rows:2.5fr  ;
+            grid-template-areas:" headerHome ";   
+        }
+        .contendorHome .seccionCentral{
+            display: grid;
+            grid-template-columns:7fr ;
+            grid-template-rows:3.5fr 3.5fr;
+            grid-template-areas:" divSeccion"
+                                 "sectionRutini";   
+        }
+        
+        .contendorHome .footerHome{
+            display: grid;
+            grid-template-columns:7fr;
+            grid-template-rows:1fr  ;
+            grid-template-areas:" footerHome ";   
+        }
+    
+        .headerHome{
+            background-color:$colorSecundario;
+        }
+        .menu{
+            background-color: black;
+        }
+    }
+    @media screen and (max-width:399px){
+        .sectionRutini{
+            display: none;
+        }
+        .contendorHome .seccionCentral{
+            display: grid;
+            grid-template-columns:7fr ;
+            grid-template-rows:3.5fr;
+            grid-template-areas:" divSeccion";   
+        }
+    
+    }
+
+}
+/*estilos ubicacion*/
+
+body{
+    header{
+        background-color: $colorSecundario;
+        .ubicacionPiePagina{
+            background-color: red;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        .absolutImagen{
+            text-align: center;
+        }
+        .ubicacionTitulo{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+            border: 10px solid black;
+        
+        }
+        
+    }
+}
+
+/*estilos productos*/
+body{
+    div{
+        .headerProducto{
+            display: grid;
+            grid-template-columns:7fr;
+            grid-template-rows:7fr  ;
+            grid-template-areas:" headerProducto ";
+            grid-area: headerProducto;
+            display: flex;
+            flex-wrap: wrap;
+            background-color:$colorTerciario;
+            .productosPiePagina{
+                background-color: red;
+                font-weight: bold;
+                text-align: center;
+            }
+            .productosTitulo{
+                text-align: center;
+                font-weight: bold;
+                font-size: 5vw;
+                border: 10px solid black;
+            }
+            .container-fluid{
+                background-color:$colorSecundario;
+                justify-content: space-evenly;
+                border:3px solid black;
+                .navproductos{
+                    text-align: center;
+                }
+
+            }
+            .aperitivosProductos{
+                text-align: center;
+            }
+            
+            .imagenAperitivos{
+                animation-name: imagenAperitivos;
+                animation-iteration-count: infinite;
+                animation-duration: 5s;
+            }
+            @keyframes imagenAperitivos{
+                from{
+                    transform: scale(0);
+                }
+                to{
+                    transform: scale(0.7);
+                }  
+            }
+        }
+        .mainProductos {
+            display: grid;
+            grid-template-columns:7fr;
+            grid-template-rows:1fr 1fr 2.5fr;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .tablaAlinerar{
+                text-align: center;
+                table-layout: none;
+                font-weight: bold;
+            }
+            .tablaProductos{
+                grid-area: tablaProductos;
+            }
+            .tablaProductos td{
+                font-size: 2.5vw;
+            }
+            .tablaProductos{
+                background-color: goldenrod;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                table-layout: fixed;
+                margin-bottom: 0px;
+                font-weight: bold;
+            
+            }
+            .fernetProductosTitulo:hover{
+                transform: scale(3);
+                transform: translate(20px, 40px);
+                background-image: linear-gradient(to left, white, right);
+            }
+            .fernetProductosTitulo{
+                background-color:$colorTerciario;
+                font-size: 3vw;
+                text-align: center;
+                align-items: center;
+                margin-top: 5px;
+            }
+            .contenedorProductosImg{
+                text-align: center;
+                grid-area: contenedorProductosImg;
+            }
+            .contenedorMultimedia{
+                grid-area: contenedorMultimedia;
+                width: 100%;
+            }
+            grid-template-areas:"tablaProductos" 
+                                "fernetProductosTitulo"
+                                "contenedorMultimedia ";                                        
+        }
+        .footerProductos {
+            display: grid;
+            grid-template-columns:7fr ;
+            grid-template-rows:1fr;
+            grid-template-areas:"footerProductos"; 
+            grid-area: footerProductos; 
+            background-color:$colorTerciario;
+        }
+
+    }
+    @media screen and (max-width:600px){  
+        body{
+            background-color: burlywood;
+        }
+       .contenedorMultimedia{
+        display: none;
+       }
+        .contendorProductos .mainProductos {
+            display: grid;
+            grid-template-columns:7fr;
+            grid-template-rows:2.25fr 2.25fr;
+            grid-template-areas:"tablaProductos" 
+                                "fernetProductosTitulo";   
+        }
+    
+    }
+    @media screen and (max-width:399px){  
+        body{
+            background-color: whitesmoke
+        }
+       
+    
+    }
+}
+/*estilos eventos*/
+
+body{
+    .headerEventos{
+        background-color:$colorTerciario;
+        display: flex;
+        flex-direction: column;
+        .eventosPiePagina{
+            background-color: red;
+            text-align: center;
+            align-items: center;
+        }
+        .eventosTitulo{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+            border: 10px solid black;
+        }
+        .navEventos{
+            background-color:$colorTerciario;
+            font-weight: bold;
+            border: 10px solid black;
+        }
+    }
+    .conteiner-fluid{
+        background-color:$colorSecundario;
+        padding: 100px;
+    }
+    footer{
+        background-color: $colorTerciario;
+        text-align: center;
+    }
+}
+        
+/*estilos contacto*/
+
+.bodyContacto{
+    display:grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.3fr 1.6fr 0.1fr;
+    grid-template-areas: "headerContacto"
+    "mainContacto"
+    "footerContacto";
+        .headerContacto{
+            grid-area: headerContacto;
+            text-align: center;
+            display: flex;
+            .contactoPiePagina{
+               background-color: red;
+            }
+            .contactosTitulo{
+               text-align: center;
+               font-family: 'Times New Roman', Times, serif;
+               font-size: 60px;
+               border: 10px solid black;
+              }
+            .navContacto{
+             justify-content: center;
+            }
+        }
+        .mainContacto{
+         grid-area: mainContacto;
+         .tablaColor{
+            background-color:$colorTerciario;
+            text-align: center;
+            border: 3px solid burlywood;
+            text-shadow: 1px black;
+            margin-top: 0px;
+         }
+         .card-group{
+             background-color: $colorSecundario;
+             grid-area: card-group;
+            }
+           }
+        .footerContacto{
+             grid-area: footerContacto;
+             background-color:$colorTerciario;
+             text-align: center;
+           }               
+        }
+        
+
+        @media screen and (max-width:600px){
+            .bodyContacto{
+                background-color: $colorTerciario;
+            }
+            .card-group{
+                display: none;
+            }
+         }
+         @media screen and (max-width:300px){
+            .bodyContacto{
+                background-color: whitesmoke;
+            }
+            .contactosTitulo{
+                font-size: small;
+                font-weight: bold;
+                color:$colorTerciario;
+            }
+             }
+
+      
+/*estilos carrito compra*/
+body{
+    header{
+        display: flex;
+        flex-direction: column;
+        .carritoPiePagina{
+            background-color: red;
+        }
+        .carritoTitulo{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+            border: 10px solid black;
+        }
+        .navCarrito{
+            border: 10px solid black;
+        }
+        .listaCarrito{
+            background-color: black;
+            color: whitesmoke;
+            list-style: none;
+            text-decoration: none;
+            font-size: bold;
+        }
+    }
+}
+ 
